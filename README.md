@@ -1,1 +1,1 @@
-# CSCI220-Lacey
+# CSCI220- Isaiah Lacey Computer Information Systems
