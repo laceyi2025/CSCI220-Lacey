@@ -7,7 +7,7 @@
         <!--Adding CSS Style-->
         <style>
             body {background-color: #808080;}
-            div {font-size: medium; font-family: 'Courier New', Courier, monospace; color: #8a4e4c ;font-weight: bolder; text-align: center; border: thick; 
+            div {font-size: medium; font-family: 'Courier New', Courier, monospace; color: #8a4e4c ;font-weight: bolder; text-align: center; border-width: 3; border-style: solid; 
             border-color: black; background-color: lightgray;}
             a:link {color:#8a4e4c;}
             a:visited {color: #8a4e4c}
@@ -17,6 +17,7 @@
             ul{font-family: 'Courier New', Courier, monospace; font-size: medium; font-weight: bolder; color: #8a4e4c;}
             p {color: rgb(121, 2, 2); font-family: Georgia, 'Times New Roman', Times, serif;}
             table {empty-cells: hide; font-family: 'Courier New', Courier, monospace; font-size: large;}
+           
         </style>
     </head>
     <!--Starting the actual webpage-->
@@ -24,8 +25,18 @@
 <hr>
 <!--putting in a div command to group the link to the week 4 assignment for the user at the top of the page-->
     <div id="header">
-        Supplemental Material:
-         <a href="UserExperience.html">Experiment Details</a>
+        <form> 
+            <p>
+                All Websites
+            </p>
+            <!--Command found from smallbusiness.chron.com's source code-->
+            <select name="select" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                <option value=> </option>
+                <option value= "UserExperience.html"> Experiment Details </option>
+                <option value= "Investors.html"> Investor Page </option>
+            </select>
+        </form>
+        <br>
     </div>
 <hr>
 <!--Starting to put the information given into the page-->

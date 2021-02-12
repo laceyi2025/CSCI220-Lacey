@@ -11,7 +11,7 @@
         body {background-color: #c3c3c3}
         h1 {color: coral; font-family: 'Courier New', Courier, monospace;}
         h2 {color: aqua; font-family: 'Courier New', Courier, monospace;}
-        div {font-size: large; font-family: 'Courier New', Courier, monospace; color: coral;font-weight: bolder; text-align: center;}
+        div {font-size: large; font-family: 'Courier New', Courier, monospace; color: coral;font-weight: bolder; text-align: center; border-color: black;}
         a:link {color: coral;}
         a:visited {color: coral}
         table {empty-cells: hide; }
@@ -23,8 +23,17 @@
 
     <h1>Experiment Details</h1>
     <Div id="header">
-        Investor's Funding Page:
-         <a href="C:\Users\iblacey\OneDrive - University of Saint Francis\Documents\CSCI220\CSCI220-Lacey\Week5\Investors.html">Investors</a>
+        <form> 
+            <p>
+                All Websites
+            </p>
+            <!--Command found from smallbusiness.chron.com's source code-->
+            <select name="select" onchange="window.open(this.options[this.selectedIndex].value,'_blank')">
+                <option value=> </option>
+                <option value= "UserExperience.html"> Experiment Details </option>
+                <option value= "Investors.html"> Investor Page </option>
+            </select>
+        </form>
     </Div>
     <h2>Description</h2>
     <!--Start of a bulleted list of the experiment description-->
