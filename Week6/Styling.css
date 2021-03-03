@@ -7,6 +7,12 @@ body
 h1  
     {color: orangered;font-family: 'Times New Roman', Times, serif;}
 
+h2
+    {color: orangered; font-family: 'Times New Roman', Times, serif;}
+
+h3
+    {color: orangered; font-family: 'Times New Roman', Times, serif;}
+
 form 
     { text-align: center; font-family: 'Times New Roman', Times, serif; color: rgb(36, 53, 6); background-color: rgb(36, 53, 6);}
 
@@ -20,7 +26,9 @@ textarea {background-color: rgb(53, 28, 5); color: white; position:relative;}
 
 input {background-color: rgb(53, 28, 5); color: white;}
 
+table{border: 3px; color: orangered; }
 
+p {color: orangered; font-size: 20px;}
 
 .topNav 
         {
@@ -32,3 +40,25 @@ input {background-color: rgb(53, 28, 5); color: white;}
             margin-top: 0px;
             
         }
+
+.mapImg
+{
+    border: 2px orangered;
+}
+
+.historyText
+{
+    text-align: left;
+    color: orangered;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    box-sizing: border-box;
+    
+}
+
+.licenseTable
+{
+    empty-cells: hide; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
