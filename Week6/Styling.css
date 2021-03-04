@@ -8,15 +8,15 @@ h1
     {color: orangered;font-family: 'Times New Roman', Times, serif;}
 
 h2
-    {color: orangered; font-family: 'Times New Roman', Times, serif;}
+    {color: orangered; font-family: 'Times New Roman', Times, serif; text-align: center;}
 
 h3
-    {color: orangered; font-family: 'Times New Roman', Times, serif;}
+    {color: orangered; font-family: 'Times New Roman', Times, serif; text-align: center;}
 
 form 
     { text-align: center; font-family: 'Times New Roman', Times, serif; color: rgb(36, 53, 6); background-color: rgb(36, 53, 6);}
 
-li { display:inline;}
+.liContact { display:inline;}
 
 a:link {color: orangered; font-family: 'Times New Roman', Times, serif; font-size: 20px;}
 
@@ -69,9 +69,10 @@ p {color: orangered; font-size: 20px;}
     font-family: 'Times New Roman', Times, serif;
     font-size: small;
 }
-
-.eventsH2
+.divTechniques
 {
-    text-align: center;
+    border: solid rgb(36, 53, 6);
+    border-width: medium;
+    color: orangered;
+    background-color: rgb(53, 28, 5);
 }
-
