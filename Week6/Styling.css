@@ -62,3 +62,10 @@ p {color: orangered; font-size: 20px;}
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
 }
+
+.dateTable
+{
+    empty-cells: hide;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+}
