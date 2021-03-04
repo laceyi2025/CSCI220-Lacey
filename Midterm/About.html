@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<Title>Home Page</Title>
+
+<!--adding css Styling to the webpage-->
+<link href="Styling.css" type="text/css" rel="styleSheet" />
+
+<!--In document styling-->
+<!--Making it possible to opput divs beside each other-->
+<style>
+    #mainBox
+    {
+        border:3px solid orangered;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    #map
+    {
+        text-align: left;
+        font-size: 20px;
+    }
+    #history
+    {
+        border:2px solid orangered;
+        text-align: left;
+        font-size: 20px;
+    }
+</style>
+
+</head>
+
+<body>
+    <!--adding a div for the top navigation menu-->
+    <div class= "topNav">
+        <a href="About.html"><img src="whitetailAntlers.png" alt="AntlerShadow" height="100px" width="100px" style="background-color: white;
+         border-width: 10px;"></a>
+         <a href="Contact.html">Contact</a>
+        <a href="Events.html">2021-2022 Season Dates</a>
+        <a href="Technique&Methods.html">Hunting Strategy</a>
+    </div>
+<hr>
+<br>
+<!--Adding a map of the counties of Indiana and a little history of Indiana Hunting-->
+<h2>History of Hunting Indiana</h2>
+<div id="mainBox">
+    <div id="map" class="historyText"> 
+        <figure>
+            <img src="indiana-county-map.gif" alt="county image" width="250" height="300">
+            <br>
+            <figcaption class="mapText">Map Courtesy of <a href="https://geology.com/county-map/indiana.shtml"> geology.com</a></figcaption>
+        </figure>
+    </div>
+
+    <div id="history" class="historyText">
+        <p>
+            Deer hunting in Indiana has a long and deep history. In times before there were season restrictions on deer, they were just allowed to be harvested
+            whenever someone wanted to. In some areas there were reports of 65 deer being harvested in a day. All the way up until 1893 there were whitetails in Indiana. 
+            The last deer to be killed in Indiana was in 1893 in Knox County. This lead to a hold on hunting the animals. Between the years of 1934 and 1942 there were 296 
+            deer bought from the states of Wisconsin, Michigan, Pennsylvania, and North Carolina for release into the state. The next year, 1943, the deer population was 
+            estimated at 900. 8 years later, in 1951, was the first deer season in 58 years. This season was only three days long. From 1951 until the present seasons and 
+            restrictions have changed. We are just glad to still be abel to harvest these animals. (<a href="https://www.in.gov/dnr/fishwild/3359.htm"> in.dnr.gov</a>)
+            <br>
+            <br>
+            Small and other game hunting has always been around. These include squirrel (fox and gray), coyote, fox, roccon, opossum, turkey, fowl, and birds. 
+            <br>
+            <br>
+            A standard hunting license is required to hunt all small game. However, indiana residents are allowed only 2 does(female deer) and 1 buck(male deer) per year with the 
+            license.
+            Extra tag and stamps are required to hunt all fowl and birds, including turkeys. 
+        </p>
+    </div>
+</div>
+   
+<br>
+<hr>
+<br>
+
+<h2>License Prices</h2>
+<!--Adding tables with lisence prices for residents and non- residents-->
+<div>
+    <h3>Residents of Indiana</h3>
+    <table class="licenseTable" bgColor="rgb(36, 53, 6)" border=3>
+        <tr>
+            <th width ="300px">License Types:</th>
+            <th>Annual Hunting</th>
+            <th>Deer License Bundle (1 buck, 2 does)</th>
+            <th>Deer Archery</th>
+            <th>Deer Crossbow</th>
+            <th>Deer Firearm</th>
+            <th>Deer Military/Refuge</th>
+            <th>Deer Muzzleloader</th>
+            <th>Deer Reduction Zone</th>
+            <th>Bonus Antlerless</th>
+            <th>Spring and Fall Turkey</th>
+            <th>Waterfowl and Land Bird</th>
+        </tr>
+        <tr>
+            <th>Prices:</th>
+            <th>$17</th>
+            <th>$65</th>
+            <th>$24</th>
+            <th>$24</th>
+            <th>$24</th>
+            <th>$24</th>
+            <th>$24</th>
+            <th>$24</th>
+            <th>$24</th>
+            <th>$25</th>
+            <th>$6.75</th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h3>NonResidents</h3>
+    <table class="licenseTable" bgColor="rgb(36, 53, 6)" border=3>
+        <tr>
+            <th width ="300px">License Types:</th>
+            <th>Annual Hunting</th>
+            <th>Deer License Bundle (1 buck, 2 does)</th>
+            <th>Deer Archery</th>
+            <th>Deer Crossbow</th>
+            <th>Deer Firearm</th>
+            <th>Deer Military/Refuge</th>
+            <th>Deer Muzzleloader</th>
+            <th>Deer Reduction Zone</th>
+            <th>Bonus Antlerless</th>
+            <th>Spring and Fall Turkey</th>
+            <th>Waterfowl and Land Bird</th>
+        </tr>
+        <tr>
+            <th>Prices:</th>
+            <th>$80</th>
+            <th>$295</th>
+            <th>$150</th>
+            <th>$150</th>
+            <th>$150</th>
+            <th>$150</th>
+            <th>$150</th>
+            <th>$150</th>
+            <th>$150</th>
+            <th>$120</th>
+            <th>$6.75</th>
+        </tr>
+    </table>
+<!--Adding the link to the Indiana DNR Website-->
+    <p>For full pricing visit <a href="https://www.in.gov/dnr/fishwild/2380.htm"> in.dnr.gov</a></p>
+</div>
+
+</body>
+
+</html>
