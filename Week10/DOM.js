@@ -1,5 +1,5 @@
 // Select the element and store it in a variable.
-var el = document.getElementById('one');
+var el = document.getElementById('Paragraph');
 
-// Change the value of the class attribute.
-el.className = 'cool';
+// Change the value of the name attribute.
+el.Name = 'cool';
