@@ -4,20 +4,26 @@
 
     <head>
         <style>
-            input {background-color: cyan;}
-            textarea {background-color: chocolate;}
+            .on {background-color: cyan;}
+            .off {background-color: chocolate;}
         </style>
-
-        <body>
-            <form action="mailto:laceyi2025@gmail.com" method="POST" name="emailForm">
-                <label for="contactName">Name:</label><br />
-                <input type="text" size="19" name="contactName" id="contactName"><br><br>
-                <label for="contactComment">Message:</label><br />
-                <textarea name="" rows="6" cols="20">
-                </textarea><br><br> 
-                <input type="submit" value="Submit">
-        </body>
-
+            <script src="../jquery-3.6.0.js"></script>
     </head>
+   <body>
+                <form action="mailto:laceyi2025@gmail.com" method="POST" name="emailForm">
+                 <label for="contactName">Name:</label><br />
+                 <input id = input1 type="text" size="19" name="contactName" id="contactName"><br><br>
+                 <label for="contactComment">Message:</label><br />
+                 <textarea id = textarea1 name="" rows="6" cols="20">
+                 </textarea><br><br> 
+                 <input type="submit" value="Submit">
+                 
+                 <script>
+                $("#input1").css("background-color", "cyan");
+                $("#textarea1").css("background-color", "chocolate");
+                </script>
+             </body>
+
+           
 
 </html>
