@@ -16,6 +16,7 @@ function addListItem()
         document.getElementById("unorderedList").appendChild(newListItem);
     }
 
+    //Clears the text input on add item click
     document.getElementById("inputListItems").value = "";
 }
 
