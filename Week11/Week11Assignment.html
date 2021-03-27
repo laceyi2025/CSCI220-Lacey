@@ -10,18 +10,19 @@
         <h1>
             ToDo List:
         </h1>
-        <form id=toDoForm action="Week11Assignment.html" method="POST">
-            <input type="text" size="19" name="contactName" id="contactName"><br><br>
-            <input type="submit" value="Add Item">
+        <form id=toDoForm action="Week11Assignment.html">
+            <input type="text" size="19" name="listItem" id="inputListItems"><br><br>
+            <input type="submit" value="Add Item" onclick="addListItem();">
             <br>
             <br>
-            <ul>
+            <ul id="unorderedList">
                 
             </ul>
             <br>
-            <input type="submit" value="Clear List">
+            <input type="submit" value="Clear List" onclick="clearList();"> 
         </form>
 
+        <script src="Week11Assignment.js"></script>
     
     </body>
 </html>
