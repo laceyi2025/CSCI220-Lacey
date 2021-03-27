@@ -2,7 +2,7 @@
 function addListItem()
 {
     var newListItem = document.createElement("li");
-    document.getElementById("inputListItems").value="";
+    var newListText = document.getElementById("inputListItems").value;
     var newPosition = document.createTextNode(newListText);
     newListItem.appendChild(newPosition);
     
@@ -16,7 +16,7 @@ function addListItem()
         document.getElementById("unorderedList").appendChild(newListItem);
     }
 
-    var newListText = document.createTextNode("textInput").value;
+    document.getElementById("inputListItems").value = "";
 }
 
 //Allows the user to click the text and cross through it to mark it off
