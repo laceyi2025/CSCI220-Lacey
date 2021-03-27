@@ -2,11 +2,11 @@
 function addListItem()
 {
     var newListItem = document.createElement("li");
-    var newListText = document.createTextNode("textInput").value;
+    document.getElementById("inputListItems").value="";
     var newPosition = document.createTextNode(newListText);
     newListItem.appendChild(newPosition);
-
-    //Makes sure there is something in the input box
+    
+//Makes sure there is something in the input box
     if (newListText === '')
     {
         alert("There needs to be an entry.");
@@ -16,7 +16,7 @@ function addListItem()
         document.getElementById("unorderedList").appendChild(newListItem);
     }
 
-    document.getElementById("inputListItems").value= "";
+    var newListText = document.createTextNode("textInput").value;
 }
 
 //Allows the user to click the text and cross through it to mark it off
