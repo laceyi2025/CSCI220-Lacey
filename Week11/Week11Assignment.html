@@ -1,28 +1,43 @@
+<!--Creating a basic html page with all the required elements-->
 <!DOCTYPE html>
 <html>
     <head>
         <title>
             ToDo List
         </title>
+
+        <!--adding the ability to strike out the todo list items with css-->
+        <style>
+            ul li.checked 
+            {
+              text-decoration: line-through;  
+            }
+        </style>
     </head>
 
     <body>
+        <!--Giving the page a visible header-->
         <h1>
             ToDo List:
         </h1>
-        <form id=toDoForm action="Week11Assignment.html">
-            <input type="text" size="19" name="listItem" id="inputListItems"><br><br>
-            <input type="submit" value="Add Item" onclick="addListItem();">
-            <br>
-            <br>
-            <ul id="unorderedList">
+        
+        <!--User input bar to allow user to add tasks-->
+        <input type="text" size="50px" height ="100%" name="listItem" id="inputListItems" class = "listItem"><br><br>
+        
+        <!--button to add the user input to the list-->
+        <input type="submit" value="Add Item" onclick="addListItem()" >
+        
+        <!--list that makes the user ToDo List-->
+        <ul id="unorderedList">
                 
-            </ul>
-            <br>
-            <input type="submit" value="Clear List" onclick="clearList();"> 
-        </form>
-
-        <script src="Week11Assignment.js"></script>
+        </ul>
+            
+        <!--Button to clear the whole list once it is finished or needs cleared-->
+        <input type="submit" value="Clear List" onclick="clearList()" >  
+        
+      
     
-    </body>
+    </body> 
+     <!--Calling of the javascript file to use to make the list-->
+        <script src="Week11Assignment.js"></script>
 </html>

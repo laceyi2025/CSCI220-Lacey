@@ -1,14 +1,38 @@
-function addListItem(){
-    var textInput = document.getElementById('inputListItems')
-    var newListItem = document.createElement('li');
-    var newListText = document.createTextNode(textInput)
-    newListItem.appendChild(newListText);
-    var newPosition = document.getElementsByTagName('ul')[0];
-    newPosition.appendChild(newListItem);
+//Create the list item and puts input into that item and presents in on the screen 
+function addListItem()
+{
+    var newListItem = document.createElement("li");
+    var newListText = document.createTextNode("textInput").value;
+    var newPosition = document.createTextNode(newListText);
+    newListItem.appendChild(newPosition);
+
+    //Makes sure there is something in the input box
+    if (newListText === '')
+    {
+        alert("There needs to be an entry.");
+    } 
+    else
+    {
+        document.getElementById("unorderedList").appendChild(newListItem);
+    }
+
+    document.getElementById("inputListItems").value= "";
 }
 
-function clearList(){
-    var removeAll = document.getElementsByTagName('li');
-    var elementContain = removeAll.parentNode;
-    elementContain.removeChild(removeAll);
+//Allows the user to click the text and cross through it to mark it off
+var listItem = document.querySelector('ul');
+listItem.addEventListener('click', function(select) 
+{
+    if (select.target.tagName == 'LI') 
+     {
+     select.target.classList.toggle('checked');
+     }
+}, false);
+
+//Allows the list to be cleared when the function is called
+function clearList()
+{
+    var clearList = document.getElementById("unorderedList");
+    while(clearList.firstChild) clearList.removeChild(clearList.firstChild);
 }
+
