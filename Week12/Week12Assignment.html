@@ -4,37 +4,87 @@
         <head>
             <Title>Week 12 Assignment</Title>
         </head>
-        
+        <!--Calls the jquery file to use those calls-->
+        <script src="../jquery-3.6.0.js"></script>
         <body>
-            <form action="">
-                <label>Name:</label>
-                <input type="text" id="nameInput">
-                <br>
-                <br>
-                <label>Title:</label>
-                <input type="text" id="titleInput">
-                <br>
-                <br>
-                <label>Hire Date:</label>
-                <input type="date" id="datePicker">
-                <br>
-                <br>
-                <input type="submit" value="Add Information" id="addInfo" onclick="fillTableInformation()">
-            </form>
-            <br>
-            <br>
 
-            <table border="2" id="informationTable">
-                <tr>
-                    <th>Name</th>
-                    <th>Title</th>
-                    <th>Hire Date</th>
-                </tr>
+            <!--makes the form with inputs for information-->
+
+            <div>
+                <form action="">
+                    <label>Name:</label>
+                    <input type="text" id="nameInput">
+                    <br>
+                    <br>
+                    <label>Title:</label>
+                    <input type="text" id="titleInput">
+                    <br>
+                    <br>
+                    <label>Hire Date:</label>
+                    <input type="date" id="datePicker">
+                    <br>
+                    <br>
+                    <input type="button" value="Add Information" id="addInfo" onclick="fillTable()">
+                </form>
+                <br>
+                <br>
+            </div>
+
+            <!--makes the table for the user input-->
+            <div>
+                <table border="2" id="informationTable">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Hire Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
                 
-            </table>
+                </table>
+            </div>
 
-            <script src="../jquery-3.6.0.js"></script>
-        <script src="Week12Assignment.js"></script>
+           <script>
+               //adds the functions from jQuery
+               $(document).ready(function()
+               {
+                   //carries out finction after submit click
+                   $("#addInfo").click(function()
+                   {
+                        var name =($("#nameInput").val());
+                        var title =($("titleInput").val());
+                        var date =($("#datePicker").val());
+                        
+                        //checks for actual input
+                        if (name===""||title===""||date==="")
+                        {
+                            alert("All information must be filled.")
+
+                            $('#name').val("");
+                            $('#title').val("");
+                            $('#date').val("");
+                        }
+                        else
+                        {
+                            $("#informationTable").append("<tr><td>"+name+"</td><td>"+title+"</td><td>"+date+"</td></tr>");
+
+                            $("#nameInput").val('');
+                            $("#titleInput").val('');
+                            $("#datePicker").val('');
+                        }
+
+                        
+
+
+                
+                    })
+               })
+               
+               
+           </script>
+           
         </body>
 
     </html>
