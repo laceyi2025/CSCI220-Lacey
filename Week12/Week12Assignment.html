@@ -8,26 +8,29 @@
         <body>
             <form action="">
                 <label>Name:</label>
-                <input type="text" size="50px" height="100%"  name="nameInput" id="nameInput">
+                <input type="text" id="nameInput">
                 <br>
                 <br>
                 <label>Title:</label>
-                <input type="text" size="50px" height="100%" name="titleInput" id="titleInput">
+                <input type="text" id="titleInput">
                 <br>
                 <br>
                 <label>Hire Date:</label>
-                <input type="date" name="datePicker" id="datePicker">
+                <input type="date" id="datePicker">
                 <br>
                 <br>
-                <input type="submit" value="Add Information" name="submitButton" id="addInfo">
+                <input type="submit" value="Add Information" id="addInfo" onclick="fillTableInformation()">
             </form>
             <br>
             <br>
 
-            <table border="2">
-                <th>Name</th>
-                <th>Title</th>
-                <th>Hire Date</th>
+            <table border="2" id="informationTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>Hire Date</th>
+                </tr>
+                
             </table>
 
             <script src="../jquery-3.6.0.js"></script>
