@@ -6,10 +6,14 @@
         </head>
         <!--Calls the jquery file to use those calls-->
         <script src="../jquery-3.6.0.js"></script>
+
+        <!--Calls Css Style Sheet-->
+        <link rel="stylesheet" href="Week12Assignment.css">
+
         <body>
 
             <!--makes the form with inputs for information-->
-            <div>
+            <div class="formDiv">
                 <form action="">
                     <label>Name:</label>
                     <input type="text" id="nameInput">
@@ -25,13 +29,15 @@
                     <br>
                     <input type="button" value="Add Information" id="addInfo">
                 </form>
-                <br>
-                <br>
             </div>
 
+            <br>
+            <br>
+
             <!--makes the table for the user input-->
-            <div>
-                <table border="2" id="informationTable" class="sortable">
+            <div class="tableDiv">
+                <br>
+                <table border="2" id="informationTable" class="sortable" align="center">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -41,8 +47,9 @@
                     </thead>
                     <tbody>
                     </tbody>
-                
+
                 </table>
+                <br>
             </div>
 
            <script>
