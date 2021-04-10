@@ -9,7 +9,6 @@
         <body>
 
             <!--makes the form with inputs for information-->
-
             <div>
                 <form action="">
                     <label>Name:</label>
@@ -24,7 +23,7 @@
                     <input type="date" id="datePicker">
                     <br>
                     <br>
-                    <input type="button" value="Add Information" id="addInfo" onclick="fillTable()">
+                    <input type="button" value="Add Information" id="addInfo">
                 </form>
                 <br>
                 <br>
@@ -32,7 +31,7 @@
 
             <!--makes the table for the user input-->
             <div>
-                <table border="2" id="informationTable">
+                <table border="2" id="informationTable" class="sortable">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -54,7 +53,7 @@
                    $("#addInfo").click(function()
                    {
                         var name =($("#nameInput").val());
-                        var title =($("titleInput").val());
+                        var title =($("#titleInput").val());
                         var date =($("#datePicker").val());
                         
                         //checks for actual input
@@ -75,12 +74,56 @@
                             $("#datePicker").val('');
                         }
 
-                        
+                        //sorts the table on the click of headers
+                        $('.sortable').each(function()
+                        {
+                            var $table = $(this);                           //defines the table
+                            var $tableBody = $table.find('tbody');          //deals with the table's body
+                            var $controller = $table.find('th');            //Storing the headings of the table
+                            var rows = $tableBody.find('tr').toArray();     //using array to store rows
 
+                            //get the header on the click and get the sort attribute
+                            $controller.on('click', function()
+                            {
+                                var $heading = $(this);
+                                var ordering = $heading.data('sort');
+                                var sortedColumn;
+                                //reverse the order based on the order of the columns
+                                if ($heading.is('.ascending') || $heading.is('.descending'))
+                                {
+                                    $heading.toggleClass('ascending descending');
+                                    $tableBody.append(rows.reverse());
+                                }
+                                else
+                                {
+                                    $heading.addClass('ascending');
+                                    //get rid of the other headers ascending and descending tags
+                                    $heading.siblings().removeClass('ascending descending');
+                                    
+                                    if (compare.hasOwnProperty(ordering)) 
+                                    {
+                                        sortedColumn = $controller.index(this);
 
-                
-                    })
-               })
+                                        rows.sort(function(a, b) 
+                                        {
+                                            a = $(a).find('td').eq(sortedColumn).text();
+                                            b = $(b).find('td').eq(sortedColumn).text();
+                                            return compare[ordering] (a,b);
+                                        }); 
+                                        
+                                        $tableBody.append(rows);
+                                    }
+                                       
+
+                                }
+
+                            });
+
+                        });
+
+                    });
+
+               });
                
                
            </script>
