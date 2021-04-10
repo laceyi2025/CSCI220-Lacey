@@ -1,0 +1,45 @@
+body {
+    background-color: royalblue;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.formDiv {
+    border: 5px;
+    border-style: solid;
+    border-color: grey;
+}
+
+.tableDiv{
+    border: 5px;
+    border-style: solid;
+    border-color: grey;
+}
+
+form {
+    color: white;
+    background-color: chocolate;
+    
+}
+table {
+    color: white;
+    background-color: chocolate;
+    border: grey;
+    height: 200%;
+    width: 500px;
+    font-size: large;
+}
+
+th.ascending, th.descending, table.sortable th:hover {
+    background-color: black;
+    color: white;
+}
+
+input {
+    color: white;
+    background-color: royalblue;
+}
+
