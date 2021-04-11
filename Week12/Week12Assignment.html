@@ -40,9 +40,9 @@
                 <table border="2" id="informationTable" class="sortable" align="center">
                     <thead>
                     <tr>
-                        <th>Name</th>
+                        <th data-sort="name">Name</th>
                         <th>Title</th>
-                        <th>Hire Date</th>
+                        <th data-sort="date">Hire Date</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -80,6 +80,26 @@
                             $("#titleInput").val('');
                             $("#datePicker").val('');
                         }
+
+                        var compare = {                           
+                            name: function(a, b) {                  
+                            a = a.replace(/^the /i, '');         
+                            b = b.replace(/^the /i, '');         
+
+                            if (a < b) {                          
+                                return -1;                        
+                            } else {                              
+                                return a > b ? 1 : 0;               
+                            }                                    
+                        },
+
+                            date: function(a, b) {                  
+                                a = new Date(a);                      
+                                b = new Date(b);                      
+
+                                return a - b;                         
+                            }
+                        };
 
                         //sorts the table on the click of headers
                         $('.sortable').each(function()
