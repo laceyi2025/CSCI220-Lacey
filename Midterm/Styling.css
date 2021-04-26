@@ -30,6 +30,7 @@ table{border: 3px; color: orangered; }
 
 p {color: orangered; font-size: 20px;}
 
+li {display: inline;}
 .topNav 
         {
             list-style-type: none;
