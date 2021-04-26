@@ -8,7 +8,9 @@
    
     <!--calls the css style sheet-->
     <link rel="stylesheet" href="Styling.css">
+        
         <body>
+            <!--Top of the page links and search bar-->
             <div class="topNav">
                 <ul>
                     <br>
@@ -26,12 +28,28 @@
                 </ul>
             </div>
 
-            
+            <!--Wrapping two divs into a div to position them-->
+            <div id="cartWrapper" class="cartWrapper">
+                <!--Items available grid to show available products-->
+                <div class="itemGrid">
+                    <label for="">Product:</label>
+                    <label for="">Descritption:</label>
+                    <label for="">Price:</label>
+                    <label for="">Quantity:</label>
+                </div>
+                <!--Customer cart div-->
+                <div class ="customerCart">
+                    <h2>
+                        Your Shopping Cart:
+                    </h2>
 
-    <!--calls items js file-->
-    <script src="../jquery-3.6.0.js"></script>
-    <script src="items.js"></script>
-    <script src="ShoppingCartScript.js"></script>
+                </div>
+            </div>
+
+                 <!--calls items js file-->
+                    <script src="../jquery-3.6.0.js"></script>
+                    <script src="items.js"></script>
+                    <script src="ShoppingCartScript.js"></script>
 
         </body>
 </html>
