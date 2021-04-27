@@ -45,13 +45,14 @@
 
     window.onload=function updateTotals(){
         
-        document.getElementById("subtotal").innerHTML = subtotal.toFixed(2);
-        document.getElementById("tax").innerHTML = tax.toFixed(2);
-        document.getElementById("total").innerHTML = total.toFixed(2);
+        
+        document.getElementById("subtotal").innerHTML = subtotal;
+        document.getElementById("tax").innerHTML = tax;
+        document.getElementById("total").innerHTML = total;
 
     }
 
-    
+
     
 
     
