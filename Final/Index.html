@@ -4,8 +4,8 @@
     <head>
         <title>FinalProject</title>
     </head>
-    
-   
+    <!--calls the items from the javascript file-->
+   <script src="items.js"></script>
     <!--calls the css style sheet-->
     <link rel="stylesheet" href="Styling.css">
         
@@ -14,7 +14,7 @@
             <div class="topNav">
                 <ul>
                     <br>
-                    <input type="text" id="searchbox" placeholder="Search Our Store" size="100px" height="100%"> <button class="searchButton">Search...</button>
+                    <input type="text" class="input" id="searchbox" placeholder="Search Our Store" size="100px" height="100%"> <button class="searchButton">Search...</button>
 
                     <br>
                     <br>
@@ -31,24 +31,113 @@
             <!--Wrapping two divs into a div to position them-->
             <div id="cartWrapper" class="cartWrapper">
                 <!--Items available grid to show available products-->
-                <div class="itemGrid">
-                    <label for="">Product:</label>
-                    <label for="">Descritption:</label>
-                    <label for="">Price:</label>
-                    <label for="">Quantity:</label>
+                <div class="item1">
+                        <div id="block1">
+                            <div>
+                                <img src="https://media.sweetwater.com/images/items/120/SM57-medium.jpg" alt="" id="image1">
+                                <br>
+                                <label for="product">Product: <p id="product1"></p></label>
+                            </div>
+                            <div>
+                                <label for="description">Descritption: <p id="description1"></p></label>
+                            </div>
+                            <div>
+                                <label for="price">Price: <p id="price1"></p></label>
+                            </div>
+                            <div>
+                                <label for="quantity">Quantity: <p id="quantity1"></p></label>
+                                <input type="number" class="quantityUpdate" id="quantityUpdate1" value="1" min="0" max="9">
+                            </div>
+
+                            <button id="removeBtn1">Delete</button>
+                            
+                        </div> 
                 </div>
-                <!--Customer cart div-->
-                <div class ="customerCart">
+                <div class="item2">
+                    <div id="block2">
+                        <div>
+                            <img src="https://media.sweetwater.com/images/guitars/SGS17HCCH/170099523/170099523-body-small.jpg" alt="" id="image2">
+                            <br>
+                            <label for="product">Product: <p id="product2"></p></label>
+                        </div>
+                        <div>
+                            <label for="description">Descritption: <p id="description2"></p></label>
+                        </div>
+                        <div>
+                            <label for="price">Price: <p id="price2"></p></label>
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity: <p id="quantity2"></p></label>
+                            <input type="number" class="quantityUpdate" id="quantityUpdate2" value="1" min="0" max="1">
+                        </div>
+
+                        <button id="removeBtn2">Delete</button>
+
+                    </div>
+                </div>
+
+                <div class="item3">
+                    <div id="block3">
+                        <div>
+                            <img src="https://media.sweetwater.com/images/items/120/SM58-medium.jpg" alt="" id="image3">
+                            <br>
+                            <label for="product">Product: <p id="product3"></p></label>
+                        </div>
+                        <div>
+                            <label for="description">Descritption: <p id="description3"></p></label>
+                        </div>
+                        <div>
+                            <label for="price">Price: <p id="price3"></p></label>
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity: <p id="quantity3"></p></label>
+                            <input type="number" class="quantityUpdate" id="quantityUpdate3" value="1" min="0" max="6">
+                        </div>
+
+                        <button id="removeBtn3">Delete</button>
+
+                    </div>
+                </div>
+
+                <div class="item4">
+                    <div id="block4">
+                        <div>
+                            <img src="https://media.sweetwater.com/images/items/120/R16-medium.jpg" alt="" id="image4">
+                            <br>
+                            <label for="product">Product: <p id="product4"></p></label>
+                        </div>
+                        <div>
+                            <label for="description">Descritption: <p id="description4"></p></label>
+                        </div>
+                        <div>
+                            <label for="price">Price: <p id="price4"></p></label>
+                        </div>
+                        <div>
+                            <label for="quantity">Quantity: <p id="quantity4"></p></label>
+                            <input type="number" class="quantityUpdate" id="quantityUpdate4" value="1" min="0" max="14">
+                        </div>
+
+                        <button id="removeBtn4">Delete</button>
+
+                    </div>
+                </div>
+                
+                
+            </div>
+
+            <!--Customer cart div-->
+            <div class ="customerCart">
                     <h2>
                         Your Shopping Cart:
                     </h2>
-
-                </div>
+                    
+                    <label for="Subtotal" class="subtotal">Sub Total: <p id="subtotal"></p></label>
+                    <label for="Tax" class="tax">Tax(7%): <p id="tax"></p></label>
+                    <label for="GrandTotal" class="total">Grand Total: <p id="grandTotal"></p></label>
             </div>
-
                  <!--calls items js file-->
                     <script src="../jquery-3.6.0.js"></script>
-                    <script src="items.js"></script>
+                    
                     <script src="ShoppingCartScript.js"></script>
 
         </body>
