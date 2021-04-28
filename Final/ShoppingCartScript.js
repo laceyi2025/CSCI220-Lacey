@@ -1,4 +1,12 @@
-    //item 1 information
+    if (document.readyState == 'loading'){
+        document.addEventListener('DOMContentLoaded', ready)
+    }else{
+        ready()
+
+    }
+
+    function ready(){
+        //item 1 information
     document.getElementById("product1").innerHTML = item1.productName;
     document.getElementById("description1").innerHTML = item1.description;
     document.getElementById("price1").innerHTML = "$"+item1.price;
@@ -27,11 +35,30 @@
 
     for (var i = 0; i < removeCartItemButtons.length; i++){
         var button = removeCartItemButtons[i]
-        button.addEventListener('click', function(event){
+        button.addEventListener('click', removeCart)
+    }
+
+        var quantityInputs = document.getElementsByClassName('quantityUpdated')
+        for (var i = 0; i < quantityInputs.length; i++){
+            var input = quantityInputs[i]
+            input.addEventListener('change', quantityChanged)
+    }
+}
+
+
+    function removeCart(event){
         var buttonClicked = event.target
         buttonClicked.parentElement.parentElement.remove()
         updateCartTotal()
-        })
+    }
+
+    function quantityChanged(event){
+        var input = event.target
+        if(isNaN(input.value) || input.value <=0){
+            input.value = 1
+        }
+
+        updateCartTotal()
     }
 
 
@@ -47,13 +74,12 @@
             var quantityElement = cartRow.getElementsByClassName('quantityUpdate')[0]
             var price = parseFloat(priceElement.innerText.replace('$',''))
             var quantity = quantityElement.value
-            
-            total = total + (price*quantity)
-           
+        
+            total =total + (price*quantity)
 
         }
 
-        document.getElementsByClassName('subtotal')[0].innerText = '$'+total
+        document.getElementsByClassName('cartTotal')[0].innerText = '$' + total
        }
     
 

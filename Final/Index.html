@@ -29,10 +29,12 @@
                 </ul>
             </div>
 
-            <!--Wrapping two divs into a div to position them-->
+            <!--making a section of divs for each item-->
             <section class= "container cart-section">
                 <h2 class="sectionHeader">CART</h2>
+                <!--wrapping divs in to a div in order to access data-->
                <div class="cartItem">
+                   <!--item 1 div-->
                    <div class="cartRow">
                        <div class="cart-item cart-column">
                            <img src="https://media.sweetwater.com/images/items/120/SM57-medium.jpg" alt="" id="image1" height="150" width="60">
@@ -48,12 +50,13 @@
                         <br>
                         <div class="cartQuantity cartColumn">
                             <label for="quantity">Quantity: <p id="quantity1"></p></label>
-                            <input type="number" class="quantityUpdate" id="quantityUpdate1" value="1" min="0" max="9">
+                            <input type="number" class="quantityUpdate" value="1" min="0" max="9">
                             <button class="removeBtn btnClear" id="removeBtn1">Delete</button>
                         </div>
                     </div>
                     <br>
                     <br>
+                    <!--item 2 div-->
                     <div class="cartRow">
                         <div class="cart-item cart-column">
                             <img src="guitarSub.jpg" alt="" id="image2" height="150" width="200">
@@ -68,12 +71,13 @@
                         <br>
                         <div class="cartQuantity cartColumn">
                             <label for="quantity">Quantity: <p id="quantity2"></p></label>
-                            <input type="number" class="quantityUpdate" id="quantityUpdate2" value="1" min="0" max="1">
+                            <input type="number" class="quantityUpdate" value="1" min="0" max="1">
                             <button class="removeBtn btnClear" id="removeBtn2">Delete</button>
                         </div>
                     </div>
                     <br>
                     <br>
+                    <!--item 3 div-->
                     <div class="cartRow">
                         <div class="cart-item cart-column">
                              <img src="https://media.sweetwater.com/images/items/120/SM58-medium.jpg" alt="" id="image3" height="150" width="60">
@@ -88,12 +92,13 @@
                         <br>
                         <div class="cartQuantity cartColumn">
                             <label for="quantity">Quantity: <p id="quantity3"></p></label>
-                            <input type="number" class="quantityUpdate" id="quantityUpdate3" value="1" min="0" max="6">
+                            <input type="number" class="quantityUpdate" value="1" min="0" max="6">
                             <button class="removeBtn btnClear" id="removeBtn3">Delete</button>
                         </div>
                     </div>
                     <br>
                     <br>
+                    <!--item 4 div-->
                     <div class="cartRow">
                         <div class="cart-item cart-column">
                             <img src="https://media.sweetwater.com/images/items/120/R16-medium.jpg" alt="" id="image4" height="150" width="200">
@@ -108,28 +113,22 @@
                         <br>
                         <div class="cartQuantity cartColumn">
                             <label for="quantity">Quantity: <p id="quantity4"></p></label>
-                            <input type="number" class="quantityUpdate" id="quantityUpdate4" value="1" min="0" max="14">
+                            <input type="number" class="quantityUpdate" value="1" min="0" max="14">
                             <button class="removeBtn btnClear" id="removeBtn4">Delete</button>
                         </div>
-
-
                     </div>
+
+                    <!--subtotal div-->
+                    <div class = "cartTotal">
+                        <strong class = "cartTotalTitle">SubTotal:</strong>
+                        <span class="cartTotalPrice">$1766.99</span>
+                    </div>
+                    <button class="purchaseBtn" type="button">Continue to Checkout</button>
 
                </div>
                
 
             </section>
-
-            <!--Customer cart div-->
-            <div class ="customerCart">
-                    <h2>
-                        Your Shopping Cart:
-                    </h2>
-                    
-                    <label for="Subtotal" >Sub Total: <p id="subtotal" class="subtotal"></p></label>
-                    <label for="Tax" >Tax(7%): <p id="tax" class="tax"></p></label>
-                    <label for="GrandTotal" >Grand Total: <p id="grandTotal" class="total"></p></label>
-            </div>
                  <!--calls items js files-->
                     <script src="../jquery-3.6.0.js"></script>
                     <script src="ShoppingCartScript.js"></script>
