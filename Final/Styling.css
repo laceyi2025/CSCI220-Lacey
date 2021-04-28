@@ -8,6 +8,8 @@ a:visited{color: #f8f4cb;}
 
 button{color:rgb(23, 23, 90); background-color: #f8f4cb;}
 
+label{font-weight: bold; color: #f8f4bc;}
+
 ul{
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
@@ -17,10 +19,14 @@ ul{
 
 li {display: inline;}
 
+
+
 .input {
     color: rgb(23, 23, 90); 
     background-color: #f8f4cb;
 }
+
+h2 {color: rgb(23, 23, 90);}
 
 
 .topNav{
@@ -30,7 +36,7 @@ li {display: inline;}
     list-style-type: none;
 }
 
-.cartWrapper{
+.cartRow{
     border: solid;
     border-width: 2px;
     background-image: linear-gradient(rgb(16, 16, 168) 0.5%, rgb(23,23,90));
@@ -38,7 +44,7 @@ li {display: inline;}
     justify-content: space-between;
 }
 
-.item1 {
+.cartItem {
     background-image: linear-gradient(rgb(16, 16, 168) 0.5%, rgb(23,23,90));
     color: #f8f4cb;
     font-family: Arial, Helvetica, sans-serif;
@@ -49,38 +55,6 @@ li {display: inline;}
     
 }
 
-.item2 {
-    background-image: linear-gradient(rgb(16, 16, 168) 0.5%, rgb(23,23,90));
-    color: #f8f4cb;
-    font-family: Arial, Helvetica, sans-serif;
-    border-style: ridge;
-    border-width: 4px;
-    border-color: white;
-    display: grid;
-    
-}
-
-.item3 {
-    background-image: linear-gradient(rgb(16, 16, 168) 0.5%, rgb(23,23,90));
-    color: #f8f4cb;
-    font-family: Arial, Helvetica, sans-serif;
-    border-style: ridge;
-    border-width: 4px;
-    border-color: white;
-    display: grid;
-    
-}
-
-.item4 {
-    background-image: linear-gradient(rgb(16, 16, 168) 0.5%, rgb(23,23,90));
-    color: #f8f4cb;
-    font-family: Arial, Helvetica, sans-serif;
-    border-style: ridge;
-    border-width: 4px;
-    border-color: white;
-    display: grid;
-    
-}
 
 .quantityUpdate {
     color: rgb(23, 23, 90); 
