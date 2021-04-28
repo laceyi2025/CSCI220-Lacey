@@ -66,4 +66,14 @@ h2 {color: rgb(23, 23, 90);}
     border-color: white;
 }
 
+.purchaseBtn{
+    background-color: rgb(23, 23, 90);
+    color: #f8f4bc;
+    border-style: groove;
+    border-width: 3px;
+    border-color: white;
+    height: 50;
+    width: 75;
+}
+
 
