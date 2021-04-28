@@ -1,4 +1,5 @@
-    if (document.readyState == 'loading'){
+   //make sure the html is loaded before running the javascript code to avoid errors
+   if (document.readyState == 'loading'){
         document.addEventListener('DOMContentLoaded', ready)
     }else{
         ready()
@@ -31,38 +32,41 @@
     document.getElementById("quantity4").innerHTML = item4.available;
   
 
-    var removeCartItemButtons = document.getElementsByClassName('btnClear')
+    //make the delete button work and update cart by callling removeCart function
+    var removeCartItemBtn = document.getElementsByClassName('btnClear')
 
-    for (var i = 0; i < removeCartItemButtons.length; i++){
-        var button = removeCartItemButtons[i]
+    for (var i = 0; i < removeCartItemBtn.length; i++){
+        var button = removeCartItemBtn[i]
         button.addEventListener('click', removeCart)
     }
-
-        var quantityInputs = document.getElementsByClassName('quantityUpdated')
+        //make changing quantities work by calling changeQuantity function
+        var quantityInputs = document.getElementsByClassName('quantityUpdate')
         for (var i = 0; i < quantityInputs.length; i++){
             var input = quantityInputs[i]
-            input.addEventListener('change', quantityChanged)
+            input.addEventListener('change', changeQuantity)
     }
 }
 
-
+    //actually make remove cart update the total
     function removeCart(event){
         var buttonClicked = event.target
         buttonClicked.parentElement.parentElement.remove()
-        updateCartTotal()
+        updateSubTotal()
     }
 
-    function quantityChanged(event){
-        var input = event.target
-        if(isNaN(input.value) || input.value <=0){
-            input.value = 1
+    //actually make changing quantity update the total
+    function changeQuantity(event){
+        var userInput = event.target
+        if(isNaN(userInput.value) || userInput.value <=0){
+            userInput.value = 1
         }
 
-        updateCartTotal()
+        updateSubTotal()
     }
 
 
-    function updateCartTotal(){
+    //define all of the variables to do the math to update tha total when called and round the total to two decimals
+    function updateSubTotal(){
         var cartItemContainer = document.getElementsByClassName('cartItem')[0]
         var cartRows = cartItemContainer.getElementsByClassName('cartRow')
         var total = 0
@@ -70,16 +74,17 @@
 
         for (var i = 0; i < cartRows.length; i++){
             var cartRow = cartRows[i]
-            var priceElement = cartRow.getElementsByClassName('price')[0]
-            var quantityElement = cartRow.getElementsByClassName('quantityUpdate')[0]
-            var price = parseFloat(priceElement.innerText.replace('$',''))
-            var quantity = quantityElement.value
+            var itemPrice = cartRow.getElementsByClassName('price')[0]
+            var itemQuantity = cartRow.getElementsByClassName('quantityUpdate')[0]
+            var price = parseFloat(itemPrice.innerText.replace('$','')).toFixed(2)
+            var quantity = itemQuantity.value
         
             total =total + (price*quantity)
 
         }
 
-        document.getElementsByClassName('cartTotal')[0].innerText = '$' + total
+        total = Math.round(total* 100)/100
+        document.getElementsByClassName('cartTotal')[0].innerText = 'Subtotal: $' + total
        }
     
 
